@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Nhà Vô Địch Của Anh</title>
+    <style>
+        :root {
+            --sakura-pink: #ffb7c5;
+            --soft-pink: #fff0f3;
+            --text-color: #6d4c41;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #fff5f7, #ffe4e8);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            color: var(--text-color);
+        }
+
+        /* Hiệu ứng hoa rơi */
+        .sakura {
+            position: absolute;
+            top: -10%;
+            background-color: var(--sakura-pink);
+            border-radius: 100% 0 100% 0;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { top: -10%; transform: translateX(0) rotate(0deg); }
+            100% { top: 110%; transform: translateX(100px) rotate(360deg); }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(255, 183, 197, 0.3);
+            text-align: center;
+            max-width: 380px;
+            width: 85%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            z-index: 10;
+        }
+
+        h1 { color: #d63384; font-size: 1.6rem; margin-bottom: 15px; }
+        
+        .message { font-size: 1.05rem; line-height: 1.6; margin-bottom: 25px; }
+
+        .tips-box {
+            background: #fff0f3;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+            font-size: 0.95rem;
+            border-left: 4px solid var(--sakura-pink);
+        }
+
+        .tips-box strong { color: #d63384; display: block; margin-bottom: 8px; }
+
+        .footer { 
+            margin-top: 25px; 
+            font-size: 0.85rem; 
+            color: #ad8b8b;
+            letter-spacing: 1px;
+        }
+
+        .heart { color: #ff6b81; font-size: 24px; animation: heartbeat 1.5s infinite; }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        for (let i = 0; i < 15; i++) {
+            let sakura = document.createElement('div');
+            sakura.className = 'sakura';
+            let size = Math.random() * 10 + 10 + 'px';
+            sakura.style.width = size;
+            sakura.style.height = size;
+            sakura.style.left = Math.random() * 100 + 'vw';
+            sakura.style.animationDuration = Math.random() * 3 + 4 + 's';
+            sakura.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(sakura);
+        }
+    </script>
+
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>Em đã làm tốt lắm</h1>
+        
+        <div class="message">
+            Hôm nay dù kết quả có như nào thì với anh em cũng là xuất sắc nhất. Em đã chơi rất hay và rất tự tin rồi. Đó mới là điều quan trọng ạ.
+        </div>
+        
+        <div class="tips-box">
+            <strong>Một số mẹo anh tìm được bé xem áp dụng thử nha:</strong>
+            • Ngồi duỗi chân và xoa bóp nhẹ để đỡ đau nha bé.<br>
+            • Tắm nước ấm giúp cơ bắp thư giãn nên bé nhớ tắm nước ấm nha.<br>
+            • Dùng gối kê cao bắp chân một chút khi ngủ, hôm sau chân sẽ không bị đau nhé ạ.
+        </div>
+
+        <div class="message" style="margin-top: 20px; font-size: 0.95rem;">
+            Anh xin lỗi vì chiều nay đã làm em giận thêm. Anh sẽ học cách tinh tế hơn. Bé nghỉ ngơi thật tốt nhé!
+        </div>
+
+        <div class="footer">— Iuuuuuuu bé nhiềuuuuu —</div>
+    </div>
+</body>
+</html>
