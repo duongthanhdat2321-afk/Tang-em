@@ -24,7 +24,6 @@
             color: var(--text-color);
         }
 
-        /* Hiệu ứng hoa rơi */
         .sakura {
             position: absolute;
             top: -10%;
@@ -41,23 +40,23 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(8px);
-            padding: 20px;
+            padding: 20px 20px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(255, 183, 197, 0.4);
             text-align: center;
             width: 75%;
             max-width: 320px;
-            max-height: 90vh;
+            max-height: 85vh;
             overflow-y: auto;
             z-index: 10;
             border: 1px solid rgba(255, 255, 255, 0.6);
             position: relative;
         }
 
-        h1 { color: #d63384; font-size: 1.25rem; margin: 10px 0; }
-        .message { font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px; color: var(--text-color); }
+        h1 { color: #d63384; font-size: 1.2rem; margin: 10px 0; }
+        .message { font-size: 0.85rem; line-height: 1.4; margin-bottom: 15px; color: var(--text-color); }
 
         .tips-box {
             background: #fff0f3;
@@ -71,9 +70,13 @@
 
         .tips-box strong { color: #d63384; display: block; margin-bottom: 4px; font-size: 0.85rem; }
 
-        .footer { font-size: 0.75rem; color: #ad8b8b; margin-top: 15px; }
+        .footer { 
+            font-size: 0.7rem; 
+            color: #ad8b8b;
+            margin-top: 10px;
+        }
 
-        .heart { color: #ff6b81; font-size: 26px; animation: heartbeat 1.5s infinite; cursor: pointer; }
+        .heart { color: #ff6b81; font-size: 24px; animation: heartbeat 1.5s infinite; }
         @keyframes heartbeat {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.15); }
@@ -89,7 +92,6 @@
     </audio>
 
     <script>
-        // Tạo 40 cánh hoa
         for (let i = 0; i < 40; i++) {
             let sakura = document.createElement('div');
             sakura.className = 'sakura';
@@ -102,12 +104,9 @@
             document.body.appendChild(sakura);
         }
 
-        // Hàm phát nhạc
         function playMusic() {
             var audio = document.getElementById("bgMusic");
-            audio.play().catch(function(error) {
-                console.log("Chờ tương tác để phát nhạc");
-            });
+            audio.play();
         }
     </script>
 
@@ -120,17 +119,20 @@
         </div>
         
         <div class="tips-box">
-            <strong>Một số mẹo anh tìm được bé xem thử nha:</strong>
+            <strong>Một số mẹo anh tìm được bé xem áp dụng thử nha:</strong>
             • Ngồi duỗi chân và xoa bóp nhẹ để đỡ đau nha bé.<br>
-            • Nhớ tắm nước ấm giúp cơ bắp thư giãn nè.<br>
-            • Dùng gối kê cao bắp chân khi ngủ cho đỡ mỏi chân nhé.
+            • Tắm nước ấm giúp cơ bắp thư giãn nên bé nhớ tắm nước ấm nha.<br>
+            • Dùng gối kê cao bắp chân một chút khi ngủ, hôm sau chân sẽ không bị đau nhé ạ.
         </div>
 
-        <div class="message" style="margin-top: 10px; font-size: 0.8rem; font-style: italic;">
+        <div class="message" style="margin-top: 20px; font-size: 0.9rem; font-style: italic;">
             Anh xin lỗi vì chiều nay đã làm em giận thêm. Anh sẽ học cách tinh tế hơn. Bé nghỉ ngơi thật tốt nhé!
         </div>
 
-        <div class="footer">— Chạm để nghe nhạc - Iuuuuuu bé —</div>
+        <div class="footer">
+            <div>— Iuuuuuuu bé nhiềuuuuu —</div>
+            <div style="font-size: 0.6rem; margin-top: 8px; opacity: 0.7;">(Chạm màn hình để nghe nhạc em nhé)</div>
+        </div>
     </div>
 </body>
 </html>
